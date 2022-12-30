@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="Stylesheet" href="style.css">
+</head>
+<body>
+    <div id="popup-bg"></div>
+    <section class="container">
+        <div class="sec-1">
+            <h4 id="accordian-1" onclick="first()">Accordian item #1 <span id="arrow1"></span></h4>
+            <p id="para-1"><b>This is the First item's accordion body.</b> 
+                It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. 
+                These classes control the overall appearance, as well as the showing and hiding via CSS transitions. 
+                You can modify any of this with custom CSS or overriding our default variables. 
+                It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow.
+            </p>
+        </div>
+    
+        <div class="sec-1">
+            <h4 id="accordian-2" onclick="second()">Accordian item #2 <span id="arrow2"></span></h4>
+            <p id="para-2"><b>This is the Second item's accordion body.</b> 
+                It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. 
+                These classes control the overall appearance, as well as the showing and hiding via CSS transitions. 
+                You can modify any of this with custom CSS or overriding our default variables. 
+                It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow.
+            </p>
+        </div>
+    
+        <div class="sec-1">
+            <h4 id="accordian-3" onclick="third()">Accordian item #3 <span id="arrow3"></span></h4>
+            <p id="para-3"><b>This is the Third item's accordion body.</b> 
+                It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. 
+                These classes control the overall appearance, as well as the showing and hiding via CSS transitions. 
+                You can modify any of this with custom CSS or overriding our default variables. 
+                It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow.
+            </p>
+        </div>
+    </section>
+
+    <section class="sec-btn">
+        <div class="button" id="myBtn">Launch Demo modal</div>
+        <div  class="modal" id="myModal">
+            <h3 id="header">Modal Tittle <span id="close">X</span></h3><hr>
+            <div class="clear"></div>
+            <p>Woohoo, you're reading this text in a modal!</p><hr>
+            <div class="footer">
+                <button id="closebtn">Close</button>
+                <button id="savebtn">Save Changes</button>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </section>
+   
+
+    <script>
+        var content1 = document.getElementById("para-1")
+        var content2 = document.getElementById("para-2")
+        var content3 = document.getElementById("para-3")
+        function first(){
+            if (content1.style.display  == "block")
+            {
+                content1.style.display = "none";
+                document.getElementById("arrow1").style.transform = "rotate(224deg)";
+                document.getElementById("accordian-1").style.backgroundColor = "white";
+            }
+            else
+            {
+                content1.style.display="block";
+                content2.style.display = "none";
+                content3.style.display = "none";
+                document.getElementById("accordian-1").style.borderBottom = "1px solid gray";
+                document.getElementById("accordian-2").style.borderBottom = "none";
+                document.getElementById("accordian-3").style.borderBottom = "none";
+                document.getElementById("accordian-1").style.backgroundColor = "#e7f1ff";
+                document.getElementById("accordian-2").style.backgroundColor = "white";
+                document.getElementById("accordian-3").style.backgroundColor = "white";
+                document.getElementById("arrow1").style.transform = "rotate(45deg)";
+                document.getElementById("arrow2").style.transform = "rotate(224deg)";
+                document.getElementById("arrow3").style.transform = "rotate(224deg)";
+            }
+        }
+        function second(){
+            if (content2.style.display == "block")
+            {
+                content2.style.display = "none";
+                document.getElementById("arrow2").style.transform = "rotate(224deg)";
+                document.getElementById("accordian-2").style.backgroundColor = "white";
+
+            }
+            else
+            {
+                content1.style.display="none";
+                content2.style.display = "block";
+                content3.style.display = "none";
+                document.getElementById("accordian-2").style.borderBottom = "1px solid gray";
+                document.getElementById("accordian-3").style.borderBottom = "none";
+                document.getElementById("accordian-1").style.borderBottom = "none";
+                document.getElementById("accordian-2").style.backgroundColor = "#e7f1ff";
+                document.getElementById("accordian-1").style.backgroundColor = "white";
+                document.getElementById("accordian-3").style.backgroundColor = "white";
+                document.getElementById("arrow2").style.transform = "rotate(45deg)";
+                document.getElementById("arrow1").style.transform = "rotate(224deg)";
+                document.getElementById("arrow3").style.transform = "rotate(224deg)";
+            }
+        }
+        function third(){
+            if (content3.style.display == "block" )
+            {
+                content3.style.display = "none";
+                document.getElementById("arrow3").style.transform = "rotate(224deg)";
+                document.getElementById("accordian-3").style.backgroundColor = "white";
+            }
+            else
+            {
+                content1.style.display="none";
+                content2.style.display = "none";
+                content3.style.display = "block";
+                document.getElementById("accordian-3").style.borderBottom = "1px solid gray";
+                document.getElementById("accordian-1").style.borderBottom = "none";
+                document.getElementById("accordian-2").style.borderBottom = "none";
+                document.getElementById("accordian-3").style.backgroundColor = "#e7f1ff";
+                document.getElementById("accordian-1").style.backgroundColor = "white";
+                document.getElementById("accordian-2").style.backgroundColor = "white";
+                document.getElementById("arrow3").style.transform = "rotate(45deg)";
+                document.getElementById("arrow1").style.transform = "rotate(224deg)";
+                document.getElementById("arrow2").style.transform = "rotate(224deg)";
+            }
+
+            // if (document.getElementById("accordian-3").style.backgroundColor == "#e7f1ff")
+            // {
+            //     document.getElementById("accordian-3").style.backgroundColor = "none"
+            // }
+            // else 
+            // {
+            //     document.getElementById("accordian-3").style.backgroundColor = "#e7f1ff";
+            //     document.getElementById("accordian-1").style.backgroundColor = "none";
+            //     document.getElementById("accordian-2").style.backgroundColor = "none";
+            // }
+        }
+
+       
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("myBtn");
+        var span = document.getElementById("close");
+        var closebtn = document.getElementById("closebtn"); 
+        var bg = document.getElementById("popup-bg");
+
+         
+        btn.onclick = function() {
+            modal.style.display = "block";
+            bg.style.display = "block";
+            modal.style.animation = "popupslide 1s ease-out";
+        }
+
+        
+        span.onclick = function() {
+            modal.style.display = "none";
+            bg.style.display = "none";
+        }
+
+        closebtn.onclick = function() {
+            modal.style.display = "none";
+            bg.style.display = "none";
+        }
+
+        bg.onclick = function(){
+            modal.style.display = "none";
+            bg.style.display = "none";
+        }
+    </script>
+</body>
+</html>
